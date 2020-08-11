@@ -10,7 +10,7 @@ import java.io.Reader;
 public class JsonUtils {
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
-    public static <T> T toObject(String json, Class<T> cls) {
+    public static <T> T toObject(Reader json, Class<T> cls) {
         try {
             return MAPPER.readValue(json, cls);
         } catch (IOException e) {
